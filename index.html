@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+   
+    <title>Lançamento de Notas</title>
+    <style>
+
+        #form2 {
+        display: none;
+        }
+
+        #form3 {
+        display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>LANÇAMENTO DE NOTAS</h1>
+    <p> Selecione a disciplina:
+        <select name="select" id="select">
+            <option value="1">Introdução à informática</option>
+            <option value="2">Linguagens de Programação</option>
+            <option value="3">Programação de Computadores</option>
+        </select>
+    </p>
+
+    <form id="form1" onsubmit="calcula_media('1');return false" autocomplete="off" method="post" name="formulario">
+       
+        <table border="1" value="1" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do aluno</th>
+                    <th>Prova 1</th>
+                    <th>Prova 2</th>
+                    <th>Exame</th>
+                    <th>Média</th>
+                    <th>Faltas</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Joana da Silva</td>
+                    <td><input required id="n1_aluno_0_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_0_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_0_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_0_t1"></td>
+                    <td><input type="number" min="0" max="16" name="faltas0" required></td>
+                </tr>
+
+                <tr>
+                    <td>Maria do Socorro</td>
+                    <td><input required id="n1_aluno_1_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_1_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_1_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_1_t1"></td>
+                    <td><input type="number" min="0" max="16" name="faltas1" required></td>
+                </tr>
+
+                <tr>
+                    <td>Pedro Santos</td>
+                    <td><input required id="n1_aluno_2_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_2_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_2_t1" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_2_t1"></td>
+                    <td><input type="number" min="0" max="16" name="faltas2" required></td>
+                </tr>
+            </tbody>
+            
+        </table>
+        </br> 
+
+        <button type="submit" name="b1" value="Salvar">Salvar</button>
+        <button type="reset" name="b2" value="Limpar">Limpar</button>
+
+    </form>
+
+    <form id="form2" onsubmit="calcula_media('2');return false" autocomplete="off" method="post" name="formulario">
+          
+        <table border="1" value="1" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do aluno</th>
+                    <th>Prova 1</th>
+                    <th>Prova 2</th>
+                    <th>Exame</th>
+                    <th>Média</th>
+                    <th>Faltas</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Joana da Silva</td>
+                    <td><input required id="n1_aluno_0_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_0_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_0_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_0_t2"></td>
+                    <td><input type="number" min="0" max="16" name="faltas0" required></td>
+                </tr>
+
+                <tr>
+                    <td>Maria do Socorro</td>
+                    <td><input required id="n1_aluno_1_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_1_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_1_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_1_t2"></td>
+                    <td><input type="number" min="0" max="16" name="faltas1" required></td>
+                </tr>
+
+                <tr>
+                    <td>Pedro Santos</td>
+                    <td><input required id="n1_aluno_2_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_2_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_2_t2" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_2_t2"></td>
+                    <td><input type="number" min="0" max="16" name="faltas2" required></td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+        </br>    
+            
+        <button type="submit" name="b1" value="Salvar">Salvar</button>
+        <button type="reset" name="b2" value="Limpar">Limpar</button>
+
+    </form>
+
+    <form id="form3" onsubmit="calcula_media('3');return false" autocomplete="off" method="post" name="formulario">
+        
+        <table  border="1" value="1" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do aluno</th>
+                    <th>Prova 1</th>
+                    <th>Prova 2</th>
+                    <th>Exame</th>
+                    <th>Média</th>
+                    <th>Faltas</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Joana da Silva</td>
+                    <td><input required id="n1_aluno_0_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_0_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_0_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_0_t3"></td>
+                    <td><input type="number" min="0" max="16" name="faltas0" required></td>
+                </tr>
+
+                <tr>
+                    <td>Maria do Socorro</td>
+                    <td><input required id="n1_aluno_1_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_1_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_1_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_1_t3"></td>
+                    <td><input type="number" min="0" max="16" name="faltas1" required></td>
+                </tr>
+
+                <tr>
+                    <td>Pedro Santos</td>
+                    <td><input required id="n1_aluno_2_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input required id="n2_aluno_2_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input id="n3_aluno_2_t3" type="number" value="0" min="0.0" step="0.1" max="10.0"></td>
+                    <td><input readonly= “” id="media_aluno_2_t3"></td>
+                    <td><input type="number" min="0" max="16" name="faltas3" required></td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+        </br>    
+          
+        
+        <button type="submit" name="b1" value="Salvar">Salvar</button>
+        <button type="reset" name="b2" value="Limpar">Limpar</button>
+       
+        
+    </form>
+
+    <script src='js/bootstrap.min.js' defer></script>
+    <script>
+        
+
+        var select = document.getElementById("select")
+        select.addEventListener("change", (event) => {
+
+            var form1 = document.getElementById("form1")
+            var form2 = document.getElementById("form2")
+            var form3 = document.getElementById("form3")
+
+            console.log(event.target.value)
+            if(event.target.value==1){
+                form1.style.display = "table";
+                form2.style.display = "none";
+                form3.style.display = "none";
+            }
+
+            if(event.target.value==2){
+                form1.style.display = "none";
+                form2.style.display = "table";
+                form3.style.display = "none";
+            }
+
+            if(event.target.value==3){
+                form1.style.display = "none";
+                form2.style.display = "none";
+                form3.style.display = "table";
+            }
+
+
+            
+        });
+
+        function calcula_media_por_aluno(aluno, tabela){
+            var n1 = parseFloat(document.getElementById("n1_aluno_" + aluno + "_t" + tabela).value);
+            var n2 = parseFloat(document.getElementById("n2_aluno_" + aluno + "_t" + tabela).value);
+            var n3 = parseFloat(document.getElementById("n3_aluno_" + aluno + "_t" + tabela).value);
+            
+            var notas = [n1, n2, n3];
+            var notasarray = notas.sort((a, b) => b - a);
+            
+            var media = (notasarray[0] + notasarray[1]) / 2;
+            
+            return media;
+        }
+
+        function calcula_media(tabela){
+            console.log("string")
+            var mediaAluno0 = calcula_media_por_aluno(0, tabela);
+            var mediaAluno1 = calcula_media_por_aluno(1, tabela);
+            var mediaAluno2 = calcula_media_por_aluno(2, tabela);
+
+            var media0 = document.getElementById("media_aluno_0_t" + tabela);
+            var media1 = document.getElementById("media_aluno_1_t" + tabela);
+            var media2 = document.getElementById("media_aluno_2_t" + tabela);
+
+            media0.value = mediaAluno0;
+            media1.value = mediaAluno1;
+            media2.value = mediaAluno2;
+        }
+
+        </script>
+
+</body>
+</html>
